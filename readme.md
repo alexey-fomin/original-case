@@ -1,24 +1,26 @@
 Travel API Client
 =================
 
-Fork or otherwise clone this repo into your own personal **private** GitHub repository, and please make sure to add read access for the following GitHub users:
-- Pim-Huisman
-- bv1p
+# Environment Setup
 
-Please reply to the assessment invitation that you got from us with the link to your
-repository when you are done with the assignment below. The mock backend to communicate with can be
-found [here on GitHub](https://github.com/Pim-Huisman/simple-travel-api-mock).
+1. Install JDK 17
 
-Create your own [GitHub actions](https://github.com/features/actions) to build and test your assignment software.
+   Make sure that JAVA_HOME env variable referred to JDK 17 and its 'bin' directory added to PATH env variable
 
-Start it (on windows systems use the gradlew.bat file):
 
-`./gradlew bootRun`
+2. Install docker
 
-to list all tasks:
 
-`./gradlew tasks`
+3. Install docker compose
 
-To view the actual assignment (after starting the application) go to:
+# Run service
 
-[http://localhost:9000/index.html](http://localhost:9000/index.html)
+Run from the project root directory `docker-compose -f ./scripts/docker-compose.yaml up`
+
+Run from the project root directory `./gradlew bootRun` (`./gradlew.bat bootRun` on Windows OS)
+
+# Check metrics
+
+Open `http://localhost:9000/actuator/prometheus` to see Prometheus metrics
+
+Optionally you can configure Grafana dashboard UI

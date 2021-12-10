@@ -1,34 +1,37 @@
-# Gradle
+HELP.md
 .gradle
-build
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Maven
-target
-
-# NPM
-node
-node_modules
-
-# Log files
-*.log
-
-# JDT-specific (Eclipse Java Development Tools)
+### STS ###
+.apt_generated
 .classpath
-
-# Java annotation processor (APT)
 .factorypath
-
-# VS code
 .project
-.vscode
-
-# INTELLIJ
-.idea
-*.iml
-out
-
-# Eclipse
 .settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-# Mac
-.DS_Store
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/

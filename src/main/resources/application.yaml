@@ -1,0 +1,22 @@
+server:
+  port: 9000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+
+service:
+  oauth2:
+    grant-type: ${KLM_OAUTH2_GRANT_TYPE}
+    client-id: ${KLM_OAUTH2_CLIENT_ID}
+    client-secret: ${KLM_OAUTH2_CLIENT_SECRET}
+  api:
+    mock-api-url: ${KLM_API_URL}
